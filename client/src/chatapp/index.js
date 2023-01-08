@@ -1,8 +1,10 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import HeaderBody from '../authentication/components/header'
-import { Aside, ChatContainer, Container, Header, Main, Footer } from './style'
+import ChatArea from './components/chatArea'
+import FooterBody from './components/footer'
+import HeaderBody from './components/header'
+import { Aside, ChatContainer, Container, Header, Main, Footer, ChatAreaContainer } from './style'
 
 const ChatApp = () => {
     const Navigate = useNavigate()
@@ -35,9 +37,11 @@ const ChatApp = () => {
                     <Header>
                         <HeaderBody />
                     </Header>
-                    asldkfjlkdfj
+                    <ChatAreaContainer>
+                        <ChatArea />
+                    </ChatAreaContainer>
                     <Footer>
-                        footer
+                        <FooterBody />
                     </Footer>
                 </ChatContainer>
             </Main>
