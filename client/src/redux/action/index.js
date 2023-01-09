@@ -4,3 +4,9 @@ export const chatData = (payload) => {
         payload,
     }
 }
+export const storyMode = (payload) => {
+    return {
+        type: 'STORY_MODE',
+        payload,
+    }
+}

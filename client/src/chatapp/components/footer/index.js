@@ -11,7 +11,8 @@ const FooterBody = () => {
     const typingHandal = (event) => {
         setTypeMsg(event.target.value)
     }
-    const sendHandal = () => {
+    const sendHandal = (event) => {
+        event.preventDefault()  
         setTypeMsg('')
         Dispatch(chatData({
             massage: typeMsg,
@@ -20,10 +21,10 @@ const FooterBody = () => {
         }))
     }
     return (
-        <FooterContaienr>
+        <FooterContaienr onSubmit={sendHandal}>
             {/* left  */}
             <FileContainer>
-                <SelectButton x={showFile ? 45 : 0} onClick={() => setShowFile(!showFile)}>
+                <SelectButton type='button' x={showFile ? 45 : 0} onClick={() => setShowFile(!showFile)}>
                     <AddIcon />
                 </SelectButton>
                 <SelectFileBox show={showFile ? 'visible' : 'hidden'}>
@@ -36,7 +37,7 @@ const FooterBody = () => {
             </ChatTypeContaienr>
             {/* right  */}
             <ChatActionCotainer>
-                <Send onClick={sendHandal}>
+                <Send type='submit'>
                     <TelegramIcon />
                 </Send>
             </ChatActionCotainer>

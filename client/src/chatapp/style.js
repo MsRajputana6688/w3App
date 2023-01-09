@@ -12,9 +12,10 @@ export const Aside = styled.div.attrs(({ className, id }) => ({ className, id })
     top:0px;
     width: 350px;
     height: 100%;
-    background: #fff;
+    background: #E3F2FD;
     z-index: 15;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    
 `
 export const Main = styled.div.attrs(({ className, id }) => ({ className, id }))`
     position: absolute;

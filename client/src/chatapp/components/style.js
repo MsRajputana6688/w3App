@@ -67,7 +67,7 @@ export const ListContaienr = styled.div.attrs(({ className, id, key }) => ({ cla
 `
 
 // footer 
-export const FooterContaienr = styled.div.attrs(({ className, id, key }) => ({ className, id, key }))`
+export const FooterContaienr = styled.form.attrs(({ className, onSubmit, id, key }) => ({ className, id, key }))`
     position: relative;
     width: 100%;
     height: 100%;
@@ -166,7 +166,20 @@ export const MassageContaienr = styled.div.attrs(({ className, id, key }) => ({ 
     overflow: hidden;
     overflow-y: auto;
     &::-webkit-scrollbar{
-        /* width:; */
+        width:20px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #d0d0d0;
+        border: 6px solid #fafafa;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-button{
+        background: #d0d0d0;
+        border: 5px solid #fafafa;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
     }
 `
 export const ChatBox = styled.div.attrs(({ className, id, key }) => ({ className, id, key }))`

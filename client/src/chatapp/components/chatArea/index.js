@@ -5,13 +5,11 @@ import dp from '../../../assets/user_dp/dp1.jpg'
 import { useSelector } from 'react-redux'
 const ChatArea = () => {
     const { chatMassage } = useSelector(state => state)
-    console.log(chatMassage);
     return (
         <MassageContaienr>
             {
                 chatMassage?.map((curItem, index) => {
                     const date = new Date(curItem.time).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
-                    console.log(date);
                     return <ChatBox key={index} isMe={curItem.isMe}>
                         <ChatDp>
                             <Image src={dp} />

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import ChatAside from './components/aside/chatAside'
 import ChatArea from './components/chatArea'
 import FooterBody from './components/footer'
 import HeaderBody from './components/header'
@@ -11,7 +12,7 @@ const ChatApp = () => {
     useEffect(() => {
         const getVarify = async () => {
             try {
-                const result = await axios.get('http://localhost:2917/verify', {
+                await axios.get('http://localhost:2917/verify', {
                     headers: {
                         'Access-Control-Allow-Origin': 'http://localhost:2917/',
                         'Content-Type': 'application/json',
@@ -19,7 +20,6 @@ const ChatApp = () => {
                     withCredentials: true,
                     credentials: 'same-origin',
                 })
-                console.log(result);
             } catch (error) {
                 Navigate('/user-authentication')
             }
@@ -30,7 +30,7 @@ const ChatApp = () => {
     return (
         <Container>
             <Aside>
-
+                <ChatAside />
             </Aside>
             <Main>
                 <ChatContainer>
