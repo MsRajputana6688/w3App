@@ -3,7 +3,7 @@ import { ChatModeHeader } from './style'
 const ChatMode = () => {
     return (
         <ChatModeHeader>
-            
+            header
         </ChatModeHeader>
     )
 }
